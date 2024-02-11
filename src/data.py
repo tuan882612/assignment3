@@ -1,6 +1,6 @@
 # tuan trinh 1001885663 tqt5663
 
-from typing import Any
+from typing import List
 from logger import Logger
 
 class Data:
@@ -8,18 +8,14 @@ class Data:
         if not path:
             Logger.error("Path to data file is required")
             return
-        self.path: str = path
-        self._load_data()
+        self.collected: List[List[str]] = []
+        self._load_data(path)
         
-    def _load_data(self) -> None:
+    def _load_data(self, path: str) -> None:
         try:
-            with open(self.path, "r") as f:
+            with open(path, "r") as f:
                 for line in f:
-                    print(line.split())
+                    self.collected.append(line.split())
         except Exception as e:
             Logger.error("Failed to load data", e, True)
             return
-        Logger.info("Data loaded successfully")
-        
-    def __repr__(self) -> str:
-        pass
