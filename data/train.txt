@@ -1,0 +1,9 @@
+1 leaf floats gently water 1
+2 sky reflects blue leaf 0
+3 water ripples under sky 1
+4 star glimmers night gently 0
+5 night embraces cold star 1
+6 glimmers reflects cold floats 0
+7 ripples night blue water 1
+8 leaf under star sky 0
+9 cold water night floats 1
